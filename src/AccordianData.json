@@ -1,0 +1,28 @@
+[
+    {
+        "id" : 1,
+        "qus" : "How do i book a car with Drivoxe?",
+        "ans" : "Booking with Drivoxe is Easy Visit our Website or app. select your prefered car set your dates, and complete the resevation pin a few clicks."
+    },
+     {
+        "id" : 2,
+        "qus" : "CAn modify or cancel my reservation?",
+        "ans" : "Booking with Drivoxe is Easy Visit our Website or app. select your prefered car set your dates, and complete the resevation pin a few clicks."
+    },
+      {
+        "id" : 3,
+        "qus" : "What are the age requirements for renting a car ?",
+        "ans" : "Booking with Drivoxe is Easy Visit our Website or app. select your prefered car set your dates, and complete the resevation pin a few clicks."
+    },
+      {
+        "id" : 4,
+        "qus" : "Are there any hidden fees in the rental cost?",
+        "ans" : "Booking with Drivoxe is Easy Visit our Website or app. select your prefered car set your dates, and complete the resevation pin a few clicks."
+    },
+      {
+        "id" : 5,
+        "qus" : "How can extend my rental period?",
+        "ans" : "Booking with Drivoxe is Easy Visit our Website or app. select your prefered car set your dates, and complete the resevation pin a few clicks."
+    }
+
+]
