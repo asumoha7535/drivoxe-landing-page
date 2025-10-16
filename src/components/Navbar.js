@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Login } from "react-admin";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
@@ -9,11 +9,15 @@ import { ImCross } from "react-icons/im";
 import { RxDashboard } from "react-icons/rx";
 import { FaHeart } from "react-icons/fa";
 import { IoHeartCircle } from "react-icons/io5";
+import { IoMoonSharp } from "react-icons/io5";
+import CarContext from "../Context/CarContext";
+import { IoSunnyOutline } from "react-icons/io5";
 
 function Navbar({handleVisible, wishlistNotOrdered}) {
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
   const [currentUserData, setCurrentUserData] = useState(null);
+  const {theme, setTheme} = useContext(CarContext)
 
   const [user, setUser] = useState([]);
     useEffect(() => {
@@ -94,6 +98,9 @@ let currentUser = localStorage.getItem("loggedInUser");
                     </div></button>}
 
         <div className="items-center gap-4 lg:inline-flex hidden">
+
+         <button className="h-7 w-6 transition-transform" onClick={()=>setTheme(theme === "dark" ? "light" : "dark")}>{theme === "dark" ? <IoMoonSharp className="h-7 w-6" /> : <IoSunnyOutline className="h-7 w-6" />}</button>
+
           <span className="text-red-500 font-medium cursor-pointer"><CgProfile className="h-[30px] w-[30px]" onClick={()=>setProfile(true)}/>
 </span>
 

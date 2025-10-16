@@ -11,14 +11,15 @@ import SignUp from './AdminPannel/SignUp';
 import Login from './AdminPannel/Login';
 import AdminDashBoard from './AdminPannel/AdminDashBoard';
 import UserDashBoard from './components/UserDashBoard';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import CarContext from './Context/CarContext';
 
 function App() {
 
    const [wishlistVisible, setWishlistVisible] = useState(false);
     const [allWishListData, setAllWishListData] = useState([]);
     const [cuuUser, setCurrUser] = useState(null);
-  
+    const {theme, setTheme} = useContext(CarContext);
 
     const handleRemove = (indexToRemove) => {
     const updatedWishlist = allWishListData.filter(
@@ -34,7 +35,7 @@ function App() {
 
 
   return (
-    <div className="overflow-x-hidden">
+    <div className={`overflow-x-hidden  ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
       <BrowserRouter>
     <Routes>
       <Route path='/' element={<Login />}/>
